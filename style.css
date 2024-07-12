@@ -56,8 +56,27 @@ p {
 }
 
 @media only screen and (max-width : 900px) {
-    nav .nav-links, nav .search-bar {
+    nav .nav-links{
         display: none;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        height: 300px;
+        background-color: var(--primary-body-bsckground);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.show{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: max-content;
+    }
+
+    .nav-links > .flex{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     nav .hamburger {
@@ -109,6 +128,11 @@ nav .hamburger {
 
 .company-logo img {
     width: 120px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 40px;
 }
 
 .nav-links ul {
@@ -237,3 +261,10 @@ main {
     }
 }
 
+/* .dropdown-content
+{
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+} */
