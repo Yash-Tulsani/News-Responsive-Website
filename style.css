@@ -237,8 +237,3 @@ main {
     }
 }
 
-footer > p {
-    background-color: var(--accent-color-dark);
-    color: #fff;
-    text-align: center;
-}
