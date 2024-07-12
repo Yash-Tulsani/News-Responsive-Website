@@ -59,7 +59,11 @@ p {
     nav .nav-links{
         display: none;
         position: absolute;
+<<<<<<< HEAD
         top: 53px;
+=======
+        top: 60px;
+>>>>>>> 4b1256262fc27658773f642f372ec45ff249b62b
         right: 0px;
         height: 300px;
         background-color: var(--primary-body-bsckground);
@@ -71,9 +75,12 @@ p {
         flex-direction: column;
         gap: 20px;
         width: max-content;
+<<<<<<< HEAD
         border-bottom-left-radius: 20px;
         border-top-left-radius: 20px;
         background-color: var( --primmary-background-color-nav);
+=======
+>>>>>>> 4b1256262fc27658773f642f372ec45ff249b62b
     }
 
     .nav-links > .flex{
@@ -269,3 +276,10 @@ main {
     }
 }
 
+/* .dropdown-content
+{
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+} */
