@@ -1,5 +1,5 @@
 
-const url = "https://newsapi.org/v2/everything?q=";
+const url = "https://newsapi.org/v2/everything?q=dedfc35b581e47f98cf747e1a4ef99bb";
 
 window.addEventListener("load", () => fetchNews("India"));
 
@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
 
 async function fetchNews(query) {
     try {
-        const res = await fetch(`${url}${query}&apiKey=${process.env.API_KEY}`);
+        const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
         const data = await res.json();
         bindData(data.articles);
     } catch (error) {
