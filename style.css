@@ -56,14 +56,40 @@ p {
 }
 
 @media only screen and (max-width : 900px) {
-    nav .nav-links, nav .search-bar {
+    nav .nav-links{
         display: none;
+        position: absolute;
+        top: 53px;
+        right: 0px;
+        height: 300px;
+        background-color: var(--primary-body-bsckground);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.show{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: max-content;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        background-color: var( --primmary-background-color-nav);
+    }
+
+    .nav-links > .flex{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     nav .hamburger {
         display: inline-block !important;
         background-color: var(--primary-text-color);
         color: var(--primmary-background-color-nav);
+    }
+    nav .news-input{
+        width: 10rem;
+        height: 10rem;
     }
 }
 
@@ -111,6 +137,11 @@ nav .hamburger {
     width: 120px;
 }
 
+.nav-links{
+    display: flex;
+    gap: 40px;
+}
+
 .nav-links ul {
     gap: 16px;
 }
@@ -137,8 +168,9 @@ nav .hamburger {
 }
 
 .news-input {
-    width: 200px;
-    height: 100%;
+    width: 179px;
+    height: 107%;
+
     padding-inline: 12px;
     border-radius: 4px;
     border: 2px solid #bbd0e2;
