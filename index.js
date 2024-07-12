@@ -9,6 +9,11 @@ window.addEventListener('load', () => {
     }, 1000);
 });
 
+// window.addEventListener('click', () => {
+//     const list = document.getElementsByClassName("nav-links")[0];
+//     list.classList.remove(".dropdown-content");
+//     list.classList.add("nav-links")
+// })
 
 async function fetchNews(query) {
     try {
@@ -55,12 +60,7 @@ function fillDataInCard(cardClone, article) {
     cardClone.firstElementChild.addEventListener("click", () => {
         window.open(article.url, "_blank");
     });
-    
 }
-
-
-
-
 
 let curSelectedNav = null;
 const ul=document.querySelector('ul')
@@ -86,6 +86,7 @@ ul.querySelector('#politics').addEventListener('click',()=>{
     curSelectedNav = navItem;
     curSelectedNav.classList.add("active");
 })
+
 ul.querySelector('#technology').addEventListener('click',()=>{
     fetchNews('technology');
     const navItem = document.getElementById('technology');
@@ -93,17 +94,6 @@ ul.querySelector('#technology').addEventListener('click',()=>{
     curSelectedNav = navItem;
     curSelectedNav.classList.add("active");
 })
-
-
-
-
-
-
-
-
-
-
-
 
 const searchButton = document.getElementById("search-button");
 const searchText = document.getElementById("search-text");
@@ -116,8 +106,6 @@ searchButton.addEventListener("click", () => {
     curSelectedNav = null;
 });
 
-
-
 let icon=document.querySelector('.icon');
 icon.addEventListener('click',()=>{
     document.body.classList.toggle("dark-theme")
@@ -129,4 +117,22 @@ icon.addEventListener('click',()=>{
     }
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent click event from propagating to document
+        navLinks.classList.toggle('show');
+    });
 
+    document.addEventListener('click', () => {
+        if (navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show');
+        }
+    });
+
+    navLinks.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent click event from propagating to document
+    });
+});
