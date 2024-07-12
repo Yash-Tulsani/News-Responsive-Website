@@ -60,9 +60,9 @@ p {
         display: none;
         position: absolute;
 
-        top: 53px;
+        top: 53.5px;
 
-        top: 60px;
+       
 
         right: 0px;
         height: 300px;
@@ -275,10 +275,3 @@ main {
     }
 }
 
-/* .dropdown-content
-{
-    display: block;
-    position: absolute;
-    right: 0px;
-    top: 100px;
-} */
